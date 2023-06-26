@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- tak wyglada komentarz w fxml-->
+
+<AnchorPane id="paneWindow77" prefHeight="475.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mateusz.WindowController">
+    <children>
+        <TabPane layoutY="-5.0" prefHeight="483.0" prefWidth="631.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabLogin" text="Login Page">
+                    <content>
+                        <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="645.0">
+                            <children>
+                                        <PasswordField fx:id="tPassword" layoutX="253.0" layoutY="227.0" prefHeight="86.0" prefWidth="316.0" promptText="Your password">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font size="33.0" />
+                           </font></PasswordField>
+                                        <Button fx:id="login" blendMode="DARKEN" layoutX="149.0" layoutY="160.0" mnemonicParsing="false" onAction="#doLogin" text="Login" textFill="#171717">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                                        <TextField fx:id="tLogin" layoutX="255.0" layoutY="61.0" prefHeight="87.0" prefWidth="319.0" promptText="Your login">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font size="33.0" />
+                           </font></TextField>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabTables" text="Tables">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="476.0" prefWidth="631.0">
+                     <children>
+                        <TableView fx:id="tabUsers" layoutX="-6.0" layoutY="14.0" prefHeight="238.0" prefWidth="642.0">
+                          <columns>
+                            <TableColumn fx:id="cName" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="cLastName" prefWidth="106.0" text="Last name" />
+                            <TableColumn fx:id="cPhone" prefWidth="96.0" text="Phone" />
+                            <TableColumn fx:id="cMail" prefWidth="167.0" text="Mail" />
+                              <TableColumn fx:id="cPesel" prefWidth="76.0" text="Pesel" />
+                              <TableColumn fx:id="cAdress" prefWidth="118.0" text="   Adress" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="tName" layoutX="63.0" layoutY="260.0" prefHeight="27.0" prefWidth="113.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></TextField>
+                        <Label layoutX="26.0" layoutY="264.0" text="Name:">
+                           <effect>
+                              <InnerShadow />
+                           </effect></Label>
+                        <Label layoutX="182.0" layoutY="265.0" prefHeight="17.0" prefWidth="60.0" text="Last name:">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow />
+                           </effect></Label>
+                        <TextField fx:id="tLastName" layoutX="245.0" layoutY="261.0" prefHeight="25.0" prefWidth="119.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></TextField>
+                        <Label layoutX="25.0" layoutY="318.0" text="Phone">
+                           <effect>
+                              <InnerShadow />
+                           </effect></Label>
+                        <TextField fx:id="tPhone" layoutX="63.0" layoutY="314.0" prefHeight="27.0" prefWidth="110.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></TextField>
+                        <Label layoutX="189.0" layoutY="319.0" prefHeight="17.0" prefWidth="45.0" text="e-mail:">
+                           <effect>
+                              <InnerShadow />
+                           </effect></Label>
+                        <TextField fx:id="tMail" layoutX="245.0" layoutY="315.0" prefHeight="25.0" prefWidth="119.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></TextField>
+                        <Button fx:id="bAdd" layoutX="23.0" layoutY="353.0" mnemonicParsing="false" onAction="#AddToTables" prefHeight="27.0" prefWidth="133.0" text="Add to tables">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect></Button>
+                        <DatePicker fx:id="dateofBirth" layoutX="288.0" layoutY="349.0" onAction="#showAge" prefHeight="25.0" prefWidth="118.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></DatePicker>
+                        <Label layoutX="213.0" layoutY="353.0" prefHeight="17.0" prefWidth="76.0" text="Date of birth">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Label>
+                        <Label layoutX="418.0" layoutY="353.0" text="Age">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Label>
+                        <TextField fx:id="ageField" layoutX="450.0" layoutY="349.0" prefHeight="25.0" prefWidth="61.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></TextField>
+                        <Button fx:id="button2" layoutX="315.0" layoutY="394.0" mnemonicParsing="false" onAction="#showmeTime" text="showmeTime">
+                           <effect>
+                              <InnerShadow />
+                           </effect></Button>
+                        <TextField fx:id="showmeTime" layoutX="420.0" layoutY="394.0" prefHeight="25.0" prefWidth="95.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></TextField>
+                        <ImageView fitHeight="136.0" fitWidth="181.0" layoutX="-4.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="37.0" fitWidth="57.0" layoutX="251.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/zd.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="tPesel" layoutX="409.0" layoutY="261.0" prefHeight="25.0" prefWidth="115.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect></TextField>
+                        <Label layoutX="374.0" layoutY="265.0" text="Pesel" />
+                        <Button fx:id="Save" layoutX="61.0" layoutY="394.0" mnemonicParsing="false" onAction="#SavetoFile" text="Save to file" />
+                        <Label layoutX="381.0" layoutY="318.0" text="Adress" />
+                        <TextField fx:id="YourAdress" layoutX="429.0" layoutY="314.0" />
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
